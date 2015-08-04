@@ -1,4 +1,4 @@
-OUTPUT = out/smush.o
+OUTPUT = out/smush.o out/argparse.o
 
 all: $(OUTPUT) out/smush
 
