@@ -1,14 +1,14 @@
-OUTPUT = out/smush.o out/argparse.o
+OUTPUT = out/main.o out/smush.o out/argparse.o
 
-all: $(OUTPUT) out/smush
+all: $(OUTPUT) out/dbfs
 
 out:
 	mkdir -p out
 
 out/%.o: %.c out
-	$(CC) -c -o$@ $<
+	$(CC) -Wall -Werror -c -o$@ $<
 
-out/smush: $(OUTPUT)
+out/dbfs: $(OUTPUT)
 	$(CC) $^ -o$@
 
 clean:
